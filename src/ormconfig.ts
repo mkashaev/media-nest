@@ -7,6 +7,12 @@ const config: ConnectionOptions = {
   username: 'medianest',
   password: '123',
   database: 'medianest',
+  entities: [__dirname + '/**/*.entity{.ts,.js}'],
+  synchronize: false,
+  migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
+  cli: {
+    migrationsDir: 'src/migrations',
+  },
 };
 
 export default config;
